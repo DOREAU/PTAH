@@ -1,0 +1,22 @@
+entity Application {
+	nom String,
+   	resume String
+}
+
+entity Personne {
+	nom String,
+}
+
+relationship ManyToOne {
+	Application{responsable} to Personne
+}
+
+// Set pagination options
+paginate Application with infinite-scroll
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+// Set an angular suffix
+angularSuffix * with ptah
