@@ -1,0 +1,36 @@
+
+<div *ngIf="application">
+    <h2><span>Application</span> {{application.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>Nom</span></dt>
+        <dd>
+            <span>{{application.nom}}</span>
+        </dd>
+        <dt><span>Resume</span></dt>
+        <dd>
+            <span>{{application.resume}}</span>
+        </dd>
+        <dt><span>Responsable</span></dt>
+        <dd>
+            <div *ngIf="application.responsableId">
+                <a [routerLink]="['/personne-ptah', application.responsableId]">{{application.responsableId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'application-ptah/'+ application.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>

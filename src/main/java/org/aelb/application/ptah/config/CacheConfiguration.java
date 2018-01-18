@@ -43,6 +43,8 @@ public class CacheConfiguration {
             cm.createCache(org.aelb.application.ptah.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(org.aelb.application.ptah.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(org.aelb.application.ptah.domain.SocialUserConnection.class.getName(), jcacheConfiguration);
+            cm.createCache(org.aelb.application.ptah.domain.Application.class.getName(), jcacheConfiguration);
+            cm.createCache(org.aelb.application.ptah.domain.Personne.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
