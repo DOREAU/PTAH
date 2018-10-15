@@ -1,0 +1,39 @@
+{
+    "name": "Scenario",
+    "fields": [
+        {
+            "fieldName": "nom",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "contient",
+            "otherEntityName": "pageWeb",
+            "otherEntityRelationshipName": "scenario"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "contient",
+            "otherEntityName": "codeAcces",
+            "otherEntityRelationshipName": "scenario"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "estCreePourUn",
+            "otherEntityName": "equipe",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181015084920",
+    "entityTableName": "scenario",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "ptah"
+}

@@ -43,6 +43,14 @@ public class CacheConfiguration {
             cm.createCache(org.aelb.application.ptah.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(org.aelb.application.ptah.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(org.aelb.application.ptah.domain.SocialUserConnection.class.getName(), jcacheConfiguration);
+            cm.createCache(org.aelb.application.ptah.domain.Scenario.class.getName(), jcacheConfiguration);
+            cm.createCache(org.aelb.application.ptah.domain.Scenario.class.getName() + ".contients", jcacheConfiguration);
+            cm.createCache(org.aelb.application.ptah.domain.PageWeb.class.getName(), jcacheConfiguration);
+            cm.createCache(org.aelb.application.ptah.domain.PageWeb.class.getName() + ".estContenueDans", jcacheConfiguration);
+            cm.createCache(org.aelb.application.ptah.domain.LienPageWeb.class.getName(), jcacheConfiguration);
+            cm.createCache(org.aelb.application.ptah.domain.CodeAcces.class.getName(), jcacheConfiguration);
+            cm.createCache(org.aelb.application.ptah.domain.EtatCode.class.getName(), jcacheConfiguration);
+            cm.createCache(org.aelb.application.ptah.domain.Equipe.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

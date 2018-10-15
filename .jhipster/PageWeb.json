@@ -1,0 +1,45 @@
+{
+    "name": "PageWeb",
+    "fields": [
+        {
+            "fieldName": "urlPage",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "scenario",
+            "otherEntityName": "scenario",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "estContenueDans",
+            "otherEntityName": "lienPageWeb",
+            "otherEntityRelationshipName": "pageWeb"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "pageDebut",
+            "otherEntityName": "scenario",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "pageFin",
+            "otherEntityName": "scenario",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181015084921",
+    "entityTableName": "page_web",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "ptah"
+}

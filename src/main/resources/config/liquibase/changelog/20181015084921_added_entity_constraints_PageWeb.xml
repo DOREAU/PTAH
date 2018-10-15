@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity PageWeb.
+    -->
+    <changeSet id="20181015084921-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="scenario_id"
+                                 baseTableName="page_web"
+                                 constraintName="fk_page_web_scenario_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="scenario"/>
+
+        <addForeignKeyConstraint baseColumnNames="page_debut_id"
+                                 baseTableName="page_web"
+                                 constraintName="fk_page_web_page_debut_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="scenario"/>
+
+        <addForeignKeyConstraint baseColumnNames="page_fin_id"
+                                 baseTableName="page_web"
+                                 constraintName="fk_page_web_page_fin_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="scenario"/>
+
+    </changeSet>
+</databaseChangeLog>

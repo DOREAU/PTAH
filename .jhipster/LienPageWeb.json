@@ -1,0 +1,31 @@
+{
+    "name": "LienPageWeb",
+    "fields": [
+        {
+            "fieldName": "codeSaisi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "urlCible",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "pageWeb",
+            "otherEntityName": "pageWeb",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181015084922",
+    "entityTableName": "lien_page_web",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "ptah"
+}

@@ -1,0 +1,27 @@
+{
+    "name": "Equipe",
+    "fields": [
+        {
+            "fieldName": "nom",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "aUn",
+            "otherEntityName": "codeAcces",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181015084925",
+    "entityTableName": "equipe",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "ptah"
+}
