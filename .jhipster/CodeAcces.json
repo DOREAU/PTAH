@@ -1,0 +1,27 @@
+{
+    "name": "CodeAcces",
+    "fields": [
+        {
+            "fieldName": "code",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "scenario",
+            "otherEntityName": "scenario",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181015084923",
+    "entityTableName": "code_acces",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "ptah"
+}

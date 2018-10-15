@@ -5,6 +5,18 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015084920_added_entity_Scenario.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015084921_added_entity_PageWeb.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015084922_added_entity_LienPageWeb.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015084923_added_entity_CodeAcces.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015084924_added_entity_EtatCode.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015084925_added_entity_Equipe.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20181015084920_added_entity_constraints_Scenario.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015084921_added_entity_constraints_PageWeb.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015084922_added_entity_constraints_LienPageWeb.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015084923_added_entity_constraints_CodeAcces.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015084924_added_entity_constraints_EtatCode.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015084925_added_entity_constraints_Equipe.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

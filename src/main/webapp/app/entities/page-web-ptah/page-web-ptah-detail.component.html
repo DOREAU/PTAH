@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="pageWeb">
+            <h2><span>Page Web</span> {{pageWeb.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Url Page</span></dt>
+                <dd>
+                    <span>{{pageWeb.urlPage}}</span>
+                </dd>
+                <dt><span>Scenario</span></dt>
+                <dd>
+                    <div *ngIf="pageWeb.scenarioId">
+                        <a [routerLink]="['/scenario-ptah', pageWeb.scenarioId, 'view']">{{pageWeb.scenarioId}}</a>
+                    </div>
+                </dd>
+                <dt><span>Page Debut</span></dt>
+                <dd>
+                    <div *ngIf="pageWeb.pageDebutId">
+                        <a [routerLink]="['/scenario-ptah', pageWeb.pageDebutId, 'view']">{{pageWeb.pageDebutId}}</a>
+                    </div>
+                </dd>
+                <dt><span>Page Fin</span></dt>
+                <dd>
+                    <div *ngIf="pageWeb.pageFinId">
+                        <a [routerLink]="['/scenario-ptah', pageWeb.pageFinId, 'view']">{{pageWeb.pageFinId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/page-web-ptah', pageWeb.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

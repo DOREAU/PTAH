@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="lienPageWeb">
+            <h2><span>Lien Page Web</span> {{lienPageWeb.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Code Saisi</span></dt>
+                <dd>
+                    <span>{{lienPageWeb.codeSaisi}}</span>
+                </dd>
+                <dt><span>Url Cible</span></dt>
+                <dd>
+                    <span>{{lienPageWeb.urlCible}}</span>
+                </dd>
+                <dt><span>Page Web</span></dt>
+                <dd>
+                    <div *ngIf="lienPageWeb.pageWebId">
+                        <a [routerLink]="['/page-web-ptah', lienPageWeb.pageWebId, 'view']">{{lienPageWeb.pageWebId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/lien-page-web-ptah', lienPageWeb.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
