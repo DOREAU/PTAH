@@ -1,0 +1,77 @@
+//
+// Partie définition du site
+//
+entity Scenario {
+    nom String
+}
+
+entity PageWeb {
+    urlPage String
+}
+
+// Ce sont les liens correspondant aux codes saisissables depuis la page
+entity LienPageWeb {
+	codeSaisi String
+    urlCible String
+}
+
+//
+// Partie définition des codes d'accès
+//
+entity CodeAcces {
+    code String
+}
+
+entity EtatCode {
+    key   Integer
+    value String
+}
+
+entity Equipe {
+    nom String
+}
+
+// ----------------------------------------------------------------
+relationship OneToMany {
+	Scenario{contient} to PageWeb
+}
+
+relationship ManyToOne {
+	PageWeb{pageDebut} to Scenario
+}
+
+relationship ManyToOne {
+	PageWeb{pageFin} to Scenario
+}
+
+relationship OneToMany {
+	PageWeb{estContenueDans} to LienPageWeb
+}
+// ----------------------------------------------------------------
+relationship OneToMany {
+	Scenario{contient} to CodeAcces
+}
+
+relationship ManyToOne {
+	EtatCode{aUnEtatDonne} to CodeAcces
+}
+
+relationship ManyToOne {
+	Scenario{estCreePourUn} to Equipe
+}
+
+relationship ManyToOne {
+	Equipe{aUn} to CodeAcces
+}
+
+// Set pagination options
+paginate Scenario with infinite-scroll
+
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+angularSuffix * with ptah
